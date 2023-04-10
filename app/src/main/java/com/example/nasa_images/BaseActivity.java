@@ -62,8 +62,8 @@ abstract class BaseActivity extends AppCompatActivity implements NavigationView.
             case R.id.nav_home:
                 startActivity(new Intent(this, MainActivity.class));
                 break;
-            case R.id.nav_dad_joke:
-                startActivity(new Intent(this, DadJokeActivity.class));
+            case R.id.nav_nasa_image:
+                startActivity(new Intent(this, NASAImagesActivity.class));
                 break;
             case R.id.nav_exit:
                 finishAffinity();

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=""
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_drawer"/>
+
+    <ListView
+        android:id="@+id/listViewL4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextL4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFF"
+        android:textColor="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switchL4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <Switch
+        android:id="@+id/switchL4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@id/editTextL4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonL4"
+        app:layout_constraintStart_toEndOf="@+id/editTextL4"
+        app:layout_constraintTop_toTopOf="@id/editTextL4"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/buttonL4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/switchL4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switchL4"
+        app:layout_constraintTop_toTopOf="@id/switchL4"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+
+</LinearLayout>

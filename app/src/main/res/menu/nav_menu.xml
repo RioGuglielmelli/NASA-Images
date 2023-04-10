@@ -6,9 +6,9 @@
             android:icon="@drawable/ic_home"
             android:title="Home" />
         <item
-            android:id="@+id/nav_dad_joke"
+            android:id="@+id/nav_nasa_image"
             android:icon="@drawable/ic_dadjoke"
-            android:title="Dad Joke" />
+            android:title="NASA Images" />
     </group>
 
     <item android:title="Options">
