@@ -2,14 +2,14 @@ package com.example.nasa_images;
 
 import java.util.Date;
 
-public class NasaObject {
+public class NASAObject {
     private String title, explanation, url, hdUrl;
     private Date date;
 
-    public NasaObject() {
+    public NASAObject() {
     }
 
-    public NasaObject(String title, String explanation, String url, String hdUrl, Date date) {
+    public NASAObject(String title, String explanation, String url, String hdUrl, Date date) {
         this.title = title;
         this.explanation = explanation;
         this.url = url;

@@ -2,40 +2,32 @@ package com.example.nasa_images;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-        import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 
         import android.annotation.SuppressLint;
         import android.app.DatePickerDialog;
         import android.app.Dialog;
-        import android.content.SharedPreferences;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.text.TextUtils;
-        import android.view.View;
+import android.os.AsyncTask;
+import android.view.View;
         import android.widget.Button;
         import android.widget.DatePicker;
-        import android.widget.ProgressBar;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.widget.TextView;
 
-        import org.json.JSONArray;
-        import org.json.JSONObject;
+import org.json.JSONObject;
 
         import java.io.BufferedReader;
         import java.io.InputStream;
         import java.io.InputStreamReader;
         import java.net.HttpURLConnection;
         import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.Calendar;
+import java.util.Calendar;
         import java.util.Date;
 
 public class MainActivity extends BaseActivity implements DatePickerDialog.OnDateSetListener {
     private final String API_URL = "https://api.nasa.gov/planetary/apod?api_key=DgPLcIlnmN0Cwrzcg3e9NraFaYLIDI68Ysc6Zh3d";
     private TextView selectedDateText;
     private Calendar selectedDate;
-    private NasaObject currentObject;
+    private NASAObject currentObject;
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -82,10 +74,10 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
         }
     }
 
-    public class NasaAPI extends AsyncTask<String, Integer, NasaObject> {
+    public class NasaAPI extends AsyncTask<String, Integer, NASAObject> {
         @Override
-        protected NasaObject doInBackground(String... urls) {
-            NasaObject object = new NasaObject();
+        protected NASAObject doInBackground(String... urls) {
+            NASAObject object = new NASAObject();
 
             publishProgress(0);
 
@@ -130,7 +122,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
 
         }
 
-        protected void onPostExecute(NasaObject object) {
+        protected void onPostExecute(NASAObject object) {
 
         }
 

@@ -11,6 +11,8 @@
     <string name="snackBarMessage">The checkbox is now </string>
     <string name="on"> on.</string>
     <string name="off"> off.</string>
+    <string name="open"> open</string>
+    <string name="close"> close</string>
     <string name="lab3_1">Enter your name</string>
     <string name="lab3_1ButtonText">NEXT</string>
     <string name="lab3_2">Welcome</string>

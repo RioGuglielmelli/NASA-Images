@@ -12,6 +12,8 @@
     <string name="snackBarMessage">La case à cocher est maintenant </string>
     <string name="on">activée.</string>
     <string name="off">désactivée.</string>
+    <string name="open"> ouvrir</string>
+    <string name="close"> fermer</string>
     <string name="lab3_1">Entrez votre nom</string>
     <string name="lab3_1ButtonText">SUIVANT</string>
     <string name="lab3_2">Bienvenue</string>
