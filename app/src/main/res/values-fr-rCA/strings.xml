@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NASA Images</string>
+    <string name="hello_world">Bonjour le monde</string>
+    <string name="button_text">Je suis un bouton!</string>
+    <string name="i_love_android">J\'aime Androïd</string>
+    <string name="switch1">Allumer / éteindre</string>
+    <string name="button1lab2">APPUYEZ SUR MOI</string>
+    <string name="checkBox1lab2">Regarde ça!</string>
+    <string name="edittextLab2">J\'aime Androïd</string>
+    <string name="toastMessage">Le libellé a été mis à jour</string>
+    <string name="snackBarMessage">La case à cocher est maintenant </string>
+    <string name="on">activée.</string>
+    <string name="off">désactivée.</string>
+    <string name="lab3_1">Entrez votre nom</string>
+    <string name="lab3_1ButtonText">SUIVANT</string>
+    <string name="lab3_2">Bienvenue</string>
+    <string name="lab3_2ButtonText">NE M\'APPELLE PAS ÇA</string>
+    <string name="lab3_3ButtonText">JE VOUS REMERCIE</string>
+    <string name="l4_editText">Écrivez Ici</string>
+    <string name="l4_Switch">Urgente</string>
+    <string name="l4_Button">Ajouter</string>
+    <string name="l4_alertTitle">Voulez-vous supprimer ceci?</string>
+    <string name="l4_message">Ils ont sélectionné la ligne:</string>
+</resources>

@@ -9,28 +9,12 @@
 
     <include layout="@layout/nav_drawer"/>
 
-    <ListView
-        android:id="@+id/listViewL4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/selectedDate"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
     <Button
-        android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        app:layout_constraintBottom_toBottomOf="@id/switchL4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switchL4"
-        app:layout_constraintTop_toTopOf="@id/switchL4"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        />
-
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:visibility="visible" />
 
 
 </LinearLayout>
