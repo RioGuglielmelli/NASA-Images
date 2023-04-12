@@ -28,29 +28,53 @@
 
 
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_nasa" />
-
-            <EditText
-                android:id="@+id/selectedDate"
+            <TextView
+                android:id="@+id/title_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Selected Date" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Title Place Holder" />
 
-            <Button
-                android:id="@+id/datePicker"
+
+            <ImageView
+                android:id="@+id/image_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showDatePickerDialog"
-                android:text="Pick Date" />
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/explanation_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/url_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Title Place Holder" />
+
+            <TextView
+                android:id="@+id/hdurl_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Title Place Holder" />
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Title Place Holder" />
 
             <Button
-                android:id="@+id/searchButton"
+                android:id="@+id/savePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Search" />
+                android:text="Save Photo" />
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView

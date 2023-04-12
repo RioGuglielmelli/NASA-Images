@@ -11,8 +11,7 @@
     <color name="your_text_color_primary">#FFFFFFFF</color>
     <color name="white">#FAFAFA</color>
     <color name="your_text_color_secondary">#FFD5D5D5</color>
-    <color name="your_background_color">#FF1E1E1E</color>
-    <color name="your_foreground_color">#FFBDBDBD</color>
+    <color name="your_background_color">#757575</color>
     <!-- Soft dark blues -->
     <color name="blue_1">#6C9BBC</color>
     <color name="blue_2">#4F8FAA</color>
