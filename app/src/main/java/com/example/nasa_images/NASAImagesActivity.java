@@ -1,4 +1,4 @@
 package com.example.nasa_images;
 
-public class NASAImagesActivity extends BaseActivity{
+public class NASAImagesActivity {
 }

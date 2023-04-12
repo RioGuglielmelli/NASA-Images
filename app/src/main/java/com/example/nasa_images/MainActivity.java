@@ -27,7 +27,6 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
     private final String API_URL = "https://api.nasa.gov/planetary/apod?api_key=DgPLcIlnmN0Cwrzcg3e9NraFaYLIDI68Ysc6Zh3d";
     private TextView selectedDateText;
     private Calendar selectedDate;
-    private NASAObject currentObject;
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -110,7 +109,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
                 object.setHdUrl(json.getString("hdurl"));
                 object.setDate(new Date(json.getString("date")));
 
-                currentObject = object;
+
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
@@ -123,6 +122,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
         }
 
         protected void onPostExecute(NASAObject object) {
+
 
         }
 
