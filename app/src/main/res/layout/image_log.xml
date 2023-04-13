@@ -1,50 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
 
-    <ListView
-        android:id="@+id/listViewL4"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlB1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_menu"/>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical"
+        tools:openDrawer="start">
 
-    <EditText
-        android:id="@+id/editTextL4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_3"
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/nav_menu"
+            android:id="@+id/nav_view"/>
 
-        android:textColor="@color/your_text_color_secondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/switchL4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        tools:ignore="ExtraText" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Switch
-        android:id="@+id/switchL4"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:checked="false"
-        app:layout_constraintBottom_toBottomOf="@id/editTextL4"
-        app:layout_constraintEnd_toStartOf="@+id/buttonL4"
-        app:layout_constraintStart_toEndOf="@+id/editTextL4"
-        app:layout_constraintTop_toTopOf="@id/editTextL4"
-        app:layout_constraintHorizontal_chainStyle="spread"/>
+        <ListView
+            android:id="@+id/listViewL4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+        />
 
-    <Button
-        android:id="@+id/buttonL4"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/switchL4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switchL4"
-        app:layout_constraintTop_toTopOf="@id/switchL4"
-        app:layout_constraintHorizontal_chainStyle="spread"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_3"
+            android:gravity="bottom">
+
+            <EditText
+                android:id="@+id/editTextL4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/your_text_color_secondary"
+                android:hint="Enter text here"/>
+
+            <Button
+                android:id="@+id/buttonL4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"/>
+
+        </LinearLayout>
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    </LinearLayout>

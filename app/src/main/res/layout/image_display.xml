@@ -29,7 +29,7 @@
 
 
             <TextView
-                android:id="@+id/title_text_view"
+                android:id="@+id/title_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -44,27 +44,27 @@
                 android:scaleType="fitCenter" />
 
             <TextView
-                android:id="@+id/explanation_text_view"
+                android:id="@+id/explanation_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"/>
 
             <TextView
-                android:id="@+id/url_text_view"
+                android:id="@+id/url_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="Title Place Holder" />
 
             <TextView
-                android:id="@+id/hdurl_text_view"
+                android:id="@+id/hdurl_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="Title Place Holder" />
 
             <TextView
-                android:id="@+id/date_text_view"
+                android:id="@+id/date_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"

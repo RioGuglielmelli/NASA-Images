@@ -46,10 +46,10 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item1:
-                Toast.makeText(this, "You clicked on item 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Thanks for a great semester!", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.menu_item2:
-                Toast.makeText(this, "You clicked on item 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Thank you for being accommodating!", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -65,6 +65,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_nasa_image:
                 startActivity(new Intent(this, NASAImagesActivity.class));
                 break;
+
             case R.id.nav_exit:
                 finishAffinity();
                 break;
