@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Dark theme colors -->
-    <color name="your_primary_color">#FFBB86FC</color>
-    <color name="your_primary_variant_color">#FF3700B3</color>
-    <color name="your_on_primary_color">#FFFFFFFF</color>
+    <color name="your_primary_color">#5B6394</color>
+    <color name="your_primary_variant_color">#3E384C</color>
+    <color name="your_on_primary_color">#AAAAAA</color>
     <color name="your_secondary_color">#FF03DAC5</color>
     <color name="your_secondary_variant_color">#FF018786</color>
     <color name="your_on_secondary_color">#FF000000</color>
@@ -32,5 +32,13 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+
+    <color name="red_200"> #B00020</color>
+    <color name="red_100"> #811331</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_400">#CACACA</color>
+    <color name="gray_300">#BFC0CD</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
 
 </resources>

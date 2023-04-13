@@ -53,13 +53,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/your_text_color_secondary"
-                android:hint="Enter text here"/>
+                android:hint="Enter text here"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
 
             <Button
                 android:id="@+id/buttonL4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Search"/>
+                android:text="Search"
+                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
     </LinearLayout>
