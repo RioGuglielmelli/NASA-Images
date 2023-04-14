@@ -23,5 +23,16 @@
     <string name="l4_Button">Add</string>
     <string name="l4_alertTitle">Do you want to delete this?</string>
     <string name="l4_message">They selected row is:</string>
+    <string name="title_activity_image_display">ImageDisplay</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,27 +1,28 @@
 package com.example.nasa_images;
 
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
-        import android.annotation.SuppressLint;
-        import android.app.DatePickerDialog;
-        import android.app.Dialog;
-import android.os.AsyncTask;
-import android.view.View;
-        import android.widget.Button;
-        import android.widget.DatePicker;
-import android.widget.TextView;
-
 import org.json.JSONObject;
 
-        import java.io.BufferedReader;
-        import java.io.InputStream;
-        import java.io.InputStreamReader;
-        import java.net.HttpURLConnection;
-        import java.net.URL;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Calendar;
-        import java.util.Date;
+import java.util.Date;
 
 public class MainActivity extends BaseActivity implements DatePickerDialog.OnDateSetListener {
     private final String API_URL = "https://api.nasa.gov/planetary/apod?api_key=DgPLcIlnmN0Cwrzcg3e9NraFaYLIDI68Ysc6Zh3d";
@@ -40,39 +41,10 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
             NasaAPI req = new NasaAPI();
             System.out.println(String.format("%s&date=%d-%d-%d", API_URL, selectedDate.get(Calendar.YEAR), selectedDate.get(Calendar.MONTH), selectedDate.get(Calendar.DATE)));
             req.execute(String.format("%s&date=%d-%d-%d", API_URL, selectedDate.get(Calendar.YEAR), selectedDate.get(Calendar.MONTH), selectedDate.get(Calendar.DATE)));
+            Intent intent = new Intent(MainActivity.this, DisplayImage.class);
+            startActivity(intent);
         });
     }
-
-    public void showDatePickerDialog(View v) {
-        DialogFragment newFragment = new DatePickerFragment();
-        newFragment.show(getSupportFragmentManager(), "datePicker");
-    }
-
-    @Override
-    public void onDateSet(DatePicker view, int year, int month, int day) {
-        Calendar c = Calendar.getInstance();
-
-        c.set(year, month, day);
-        selectedDate = c;
-
-        selectedDateText.setText(c.getTime().toGMTString());
-    }
-
-    public static class DatePickerFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            // Use the current date as the default date in the picker
-            final Calendar c = Calendar.getInstance();
-            int year = c.get(Calendar.YEAR);
-            int month = c.get(Calendar.MONTH);
-            int day = c.get(Calendar.DAY_OF_MONTH);
-
-            // Create a new instance of DatePickerDialog and return it
-            DatePickerDialog.OnDateSetListener listener = (DatePickerDialog.OnDateSetListener) getActivity();
-            return new DatePickerDialog(getActivity(), listener, year, month, day);
-        }
-    }
-
     public class NasaAPI extends AsyncTask<String, Integer, NASAObject> {
         @Override
         protected NASAObject doInBackground(String... urls) {
@@ -108,6 +80,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
                 object.setUrl(json.getString("url"));
                 object.setHdUrl(json.getString("hdurl"));
                 object.setDate(new Date(json.getString("date")));
+                Log.d("jsonValue", "value is " + object);
 
 
             } catch (Exception e) {
@@ -116,6 +89,39 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
 
             return object;
         }
+    }
+
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int day) {
+        Calendar c = Calendar.getInstance();
+
+        c.set(year, month, day);
+        selectedDate = c;
+
+        selectedDateText.setText(c.getTime().toGMTString());
+    }
+
+    public static class DatePickerFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current date as the default date in the picker
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            // Create a new instance of DatePickerDialog and return it
+            DatePickerDialog.OnDateSetListener listener = (DatePickerDialog.OnDateSetListener) getActivity();
+            return new DatePickerDialog(getActivity(), listener, year, month, day);
+        }
+    }
+
 
         protected void onProgressUpdate(Integer... progress) {
 
@@ -128,4 +134,3 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
 
     }
 
-}
