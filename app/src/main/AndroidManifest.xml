@@ -14,14 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NASAImages"
         tools:targetApi="31">
-        <activity
-            android:name=".ImageDisplay"
+
+        <activity android:name ="com.example.nasa_images.MainActivity2"
             android:exported="false"
-            android:label="@string/title_activity_image_display"
-            android:theme="@style/Theme.NASAImages.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+
+            >
+            <meta-data android:name="android.app.lib_name" android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
