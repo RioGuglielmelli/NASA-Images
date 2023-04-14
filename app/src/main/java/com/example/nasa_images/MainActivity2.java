@@ -2,9 +2,7 @@ package com.example.nasa_images;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
