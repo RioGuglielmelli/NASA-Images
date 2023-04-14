@@ -22,12 +22,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
-
         Toolbar myToolbar = (Toolbar)findViewById(R.id.tlB1);
         setSupportActionBar(myToolbar);
-
-
         drawerLayout = findViewById(R.id.drawerL);
         ActionBarDrawerToggle Toggle = new ActionBarDrawerToggle(this, drawerLayout, myToolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(Toggle);
