@@ -59,8 +59,11 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, MainActivity.class));
                 break;
             case R.id.nav_nasa_image:
-                startActivity(new Intent(this, NASAImagesActivity.class));
+                startActivity(new Intent(this, NASAList.class));
                 break;
+
+            case R.id.nav_about:
+                startActivity(new Intent(this, HowActivity.class));
 
             case R.id.nav_exit:
                 finishAffinity();

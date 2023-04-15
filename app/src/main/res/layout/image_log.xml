@@ -44,7 +44,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_3"
+            android:background="@color/gray_700"
             android:gravity="bottom">
 
             <EditText
@@ -60,14 +60,9 @@
                 android:id="@+id/deleteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="5dp"
+                android:text="Delete"/>
 
-            <Button
-                android:id="@+id/buttonL4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search"
-                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
     </LinearLayout>

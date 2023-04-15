@@ -29,10 +29,14 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <string name="hello_blank_fragment">This is a blank fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_empty">EmptyActivity</string>
+    <string name="save_toast">Your NASA Image was saved</string>
+    <string name="no_save">Your NASA Image was not saved!</string>
+    <string name="header_text">How to use the App!</string>
+    <string name="main_text">Begin be clicking the hamburger menu on the top left and hitting the home button. From here press the "Pick Date" button. The app will prompt you with a calendar to click on a date. Hit search after. If you love the image hit save! You can view all of your saved NASA Images by hitting the hamburger menu in the top left and hitting "NASA Images". From here you can sort through your saved NASA Images via the search bar at the bottom. If you decide you no longer want an NASA Image saved you can click on the "Delete" button at the bottom right of the page </string>
+
 
 </resources>

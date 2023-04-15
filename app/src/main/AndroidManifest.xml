@@ -13,13 +13,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.NASAImages"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-        <activity android:name ="com.example.nasa_images.MainActivity2"
-            android:exported="false"
-
-            >
-            <meta-data android:name="android.app.lib_name" android:value="" />
+        <activity
+            android:name=".HowActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NASAList"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
@@ -33,7 +48,7 @@
         <activity
             android:name=".NASAObject"
             android:label="@string/app_name"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

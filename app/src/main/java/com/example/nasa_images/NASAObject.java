@@ -1,15 +1,12 @@
 package com.example.nasa_images;
 
-import java.util.Date;
-
 public class NASAObject {
-    private String title, explanation, url, hdUrl;
-    private Date date;
+    private String title, explanation, url, hdUrl, date;
 
     public NASAObject() {
     }
 
-    public NASAObject(String title, String explanation, String url, String hdUrl, Date date) {
+    public NASAObject(String title, String explanation, String url, String hdUrl, String date) {
         this.title = title;
         this.explanation = explanation;
         this.url = url;
@@ -49,11 +46,11 @@ public class NASAObject {
         this.hdUrl = hdUrl;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

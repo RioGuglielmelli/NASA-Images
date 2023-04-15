@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class NASAImagesActivity extends BaseActivity {
+public class NASAList extends BaseActivity {
     private ArrayList<NASAImages> images = new ArrayList<>();
     SQLiteDatabase db;
     myListAdapter myAdapter;
@@ -26,7 +26,6 @@ public class NASAImagesActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.image_log);
-        Button l4B = (Button) findViewById(R.id.buttonL4);
         EditText l4ET = (EditText) findViewById(R.id.editTextL4);
         Button deB = (Button) findViewById(R.id.deleteButton);
         ListView l4List = findViewById(R.id.listViewL4);
@@ -47,7 +46,7 @@ public class NASAImagesActivity extends BaseActivity {
                 if(!filterText.isEmpty()){
                     for (NASAImages filled : images){
                         if (filled.getNasaTitle().toLowerCase().contains(filterText)
-                            || filled.getNasaDate().toLowerCase().contains(filterText)){
+                                || filled.getNasaDate().toLowerCase().contains(filterText)){
                             filter.add(filled);
                         }
                     }
@@ -135,8 +134,7 @@ public class NASAImagesActivity extends BaseActivity {
 
 
 
-
-        }
+    }
     public class NASAImages {
         String nasaTitle;
         String nasaExplanation;
@@ -152,28 +150,26 @@ public class NASAImagesActivity extends BaseActivity {
             this.nasaURL = nasaURL;
         }
 
-            public String getNasaTitle() {
-                return nasaTitle;
-            }
-
-            public String getNasaDate() {
-                return nasaDate;
-            }
-
-            public String getNasaExplain() {
-                return nasaExplanation;
-            }
-
-            public String getNasaUrl() {
-                return nasaURL;
-            }
-
-                public String getNasaHDURL() {
-                    return nasaHDURL;
-                }
-            }
+        public String getNasaTitle() {
+            return nasaTitle;
         }
 
+        public String getNasaDate() {
+            return nasaDate;
+        }
 
+        public String getNasaExplain() {
+            return nasaExplanation;
+        }
+
+        public String getNasaUrl() {
+            return nasaURL;
+        }
+
+        public String getNasaHDURL() {
+            return nasaHDURL;
+        }
+    }
+}
 
 

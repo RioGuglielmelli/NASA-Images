@@ -22,7 +22,7 @@ public class Opener extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(_id String PRIMARY KEY AUTOINCREMENT, " + COL_TITLE + " text," + COL_EXPLANATION + " text," + COL_URL + " text,"+ COL_HDURL + " text," + COL_DATE + " text);");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + "(_id INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_TITLE + " text," + COL_EXPLANATION + " text," + COL_URL + " text,"+ COL_HDURL + " text," + COL_DATE + " text UNIQUE);");
     }
     // function gets called if database version on your device is lower than VERSION_NUM
     @Override
