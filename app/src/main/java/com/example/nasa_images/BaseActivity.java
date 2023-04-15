@@ -16,6 +16,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+/**
+
+ The BaseActivity class is used to provide a common implementation for all activities
+ in the application. It extends the AppCompatActivity class and implements the
+ NavigationView.OnNavigationItemSelectedListener interface to allow for navigation through
+ the app using the navigation drawer. The class contains methods to set up the toolbar,
+ add menu items to the toolbar, handle menu item selection, and handle navigation item
+ selection. This class should be extended by all activities in the application that use
+ the navigation drawer for navigation.
+ */
+
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
 

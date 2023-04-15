@@ -24,6 +24,15 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
+/**
+
+ This class represents the main activity of the app, which allows the user to select a date and search for NASA's Astronomy Picture of the Day for that date.
+ It contains an inner class NasaAPI, which extends AsyncTask and uses NASA's API to retrieve data about the selected date's picture.
+ It also contains an inner class DatePickerFragment, which displays a date picker dialog when the user clicks the "Select Date" button.
+ The user can then click the "Search" button to retrieve data about the selected date's picture, and the app transitions to the DetailsActivity to display the retrieved data.
+ Implements the onDateSet method from the DatePickerDialog.OnDateSetListener interface to retrieve the selected date from the date picker dialog.
+ Extends the BaseActivity class to provide navigation drawer functionality.
+ */
 
 public class MainActivity extends BaseActivity implements DatePickerDialog.OnDateSetListener {
     private final String API_URL = "https://api.nasa.gov/planetary/apod?api_key=DgPLcIlnmN0Cwrzcg3e9NraFaYLIDI68Ysc6Zh3d";

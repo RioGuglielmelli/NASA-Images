@@ -1,5 +1,8 @@
 package com.example.nasa_images;
+/**
 
+ A class representing a NASA object with information such as title, explanation, url, hdUrl and date.
+ */
 public class NASAObject {
     private String title, explanation, url, hdUrl, date;
 

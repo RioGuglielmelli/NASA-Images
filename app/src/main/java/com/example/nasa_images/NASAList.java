@@ -16,6 +16,15 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+
+ NASAList displays a list of NASA images and allows for filtering and deleting of items from the list.
+ The images are loaded from a SQLite database and displayed in a ListView using a custom adapter.
+ The adapter is also responsible for updating the ListView when data is filtered.
+ The class extends BaseActivity and implements a TextWatcher interface to filter the list of images
+ based on user input in an EditText widget.
+ */
+
 public class NASAList extends BaseActivity {
     private ArrayList<NASAImages> images = new ArrayList<>();
     SQLiteDatabase db;

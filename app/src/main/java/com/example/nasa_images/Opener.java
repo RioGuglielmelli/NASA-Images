@@ -2,6 +2,15 @@ package com.example.nasa_images;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+/**
+
+ A SQLiteOpenHelper class for creating and upgrading a database of NASAImages.
+ This class contains constants for the database name, version number, and column names. It also defines functions for
+ creating, upgrading, and downgrading the database when the version number is changed. The onCreate() function is
+ called when the database is created for the first time, and it creates a table with the specified column names. The
+ onUpgrade() and onDowngrade() functions are called when the database version number changes, and they drop the old
+ table and create a new one with the updated column names.
+ */
 
 public class Opener extends SQLiteOpenHelper {
     protected final static String DATABASE_NAME = "NASAImagesDB";

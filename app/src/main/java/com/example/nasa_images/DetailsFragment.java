@@ -26,6 +26,17 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+
+ A Fragment that displays details of a selected NASA Image and allows the user to save the image.
+ This Fragment is called by the DetailsActivity and receives data from the MainActivity through a Bundle.
+ The Fragment displays the title, explanation, date, URL, HDURL and image of the selected NASA Image.
+ The user can save the image to a local database by clicking the savePhoto button.
+ The Fragment contains an AsyncTask that downloads the image in the background and sets it to the imageView.
+ The Fragment extends the Fragment class and overrides its onCreateView() and onAttach() methods.
+ The Fragment contains a private method insertData() that inserts data into a SQLite database.
+ */
+
 public class DetailsFragment extends Fragment {
     private Bundle dataFromActvity;
     private AppCompatActivity parentActivity;
